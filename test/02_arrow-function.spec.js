@@ -41,16 +41,13 @@ describe('Arrow function', () => {
             };
 
             let actual = person.add(1);
-
-            expect(actual).equal(__);
+            expect(actual).equal(2);
 
             actual = person.addThruCall(1);
-
-            expect(actual).equal(__);
+            expect(actual).equal(2);
 
             actual = person.addThruApply(1);
-
-            expect(actual).equal(__);
+            expect(actual).equal(2);
         });
     });
     describe('Used as methods', () => {
@@ -73,11 +70,11 @@ describe('Arrow function', () => {
 
             let actual = person.getAge();
 
-            expect(actual).equal(__);
+            expect(actual).equal(10);
 
             actual = person.getAgeByArrow();
 
-            expect(actual).equal(__);
+            expect(actual).equal(undefined);
 
             actual = person.getAgeProperty;
         });
@@ -106,7 +103,7 @@ describe('Arrow function', () => {
         describe("without its own 'argument' object ", () => {
 
             it('Should return the arguments variable', () => {
-                // Uncomment this line below 
+                // Uncomment this line below
                 //const arguments = 42;
                 const arr = () => arguments;
 

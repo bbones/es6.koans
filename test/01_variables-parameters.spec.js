@@ -1,3 +1,5 @@
+import { expect, should } from 'chai';
+
 describe('var, let, const', () => {
 
   describe('var...', () => {
@@ -10,7 +12,7 @@ describe('var, let, const', () => {
     }
 
     it('what do you expect???', () => {
-      //console.log(iterator(false)); // =>
+      expect(iterator(false)).equal(undefined);
     });
   });
 
@@ -26,11 +28,11 @@ describe('var, let, const', () => {
 
 
     it('what do you expect???', () => {
-      //console.log(iterator());
+      expect(iterator.bind()).to.throw(ReferenceError);
     });
   });
 
-  xdescribe('const...', () => {
+  describe('const...', () => {
     function iterator(bool) {
       if (bool) {
         const name = 'we';
@@ -39,7 +41,7 @@ describe('var, let, const', () => {
     }
 
     it('what do you expect???', () => {
-      //console.log(iterator());
+      expect(iterator.bind()).to.throw(ReferenceError);
     });
   });
 });
